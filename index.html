@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icon-memory.svg">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./bootstrap/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./paint/styles.css">  
+  <!-- my script -->
+  <script type="module" src="./script/script.js"></script>
+
+  <title>Results summary component</title>
+
+</head>
+<body>
+
+  <div class="wrapper container-fluid p-0 d-block d-md-flex align-items-center justify-content-center">
+    
+    <div class="container  row p-0 g-0  rounded-4 justify-content-between" style="max-width: 600px; min-height: 400px;">
+    
+      <section class="left-column row g-0 col-12 col-md-6 p-4 align-items-center rounded-4 text-center flex-column justify-content-between">
+        
+        <h5 class="title">Your Result</h5>
+
+        <div class="score mx-auto rounded-circle d-flex flex-column align-items-center justify-content-center">
+          <h1 class="score-text text-white">76</h1>
+          <p class="out-of text-white">of 100</p>
+        </div>
+
+        <h2 class="great text-white">Great</h2>
+
+        <p class="remark lead text-white fw-medium">
+          You scored higher than 65% of the people who has taken these tests.
+        </p>
+
+
+      </section>
+
+      <section class="right-column overflow-hidden ms-auto col-12 col-md-6 p-4 px-5 rounded-4 d-block d-md-flex flex-column align-items-start justify-content-between">
+
+        <h5 class="summary">Summary</h5>
+
+        <div class="tests-detail w-100">
+          <!-- html will be added on document object model content loaded by my vanilla javascript -->
+         </div>
+
+        <button class="continue btn btn-lg w-100 rounded-5 mt-3">
+          Continue
+        </button>
+      </section> 
+    
+    </div>
+
+  </div>
+  <script src="./bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

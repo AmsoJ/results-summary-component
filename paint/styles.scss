@@ -1,0 +1,97 @@
+@import './color';
+
+@font-face {
+    font-family: hBolder;
+    src: url(./../assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+@font-face {
+    font-family: hBold;
+    src: url(./../assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+@font-face {
+    font-family: hMed;
+    src: url(./../assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+@font-face {
+    font-family: hReg;
+    src: url(./../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+body {
+    .wrapper {
+        height: 100vh;
+        .container {
+            .left-column {
+                background-color: $Cobalt-blue;
+                // border: solid 1px yellow;
+                .title {
+                    font-family: hReg;
+                    color: $White;
+                }
+                .score {
+                    width: 50%;
+                    aspect-ratio: 1/1;
+                    background: linear-gradient($Dark-gray-blue, $Persian-blue);
+                }
+                .great {
+                    font-family: hBolder;
+                }
+                .remark {
+                    font-size: 18px;
+                }
+            }
+            .right-column {
+                .summary {
+                    color: $Dark-gray-blue
+                }
+                .tests-detail {
+                    .test {
+                        margin-bottom: 20px;
+                        transform: translate(1000px);
+                        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        &.active {
+                            transform: translate(0px);
+                        }
+                        &:first-child {
+                            background-color: $Light-red-sat;
+                            .test-title {
+                                color: $Light-red
+                            }
+                        }
+                        &:nth-child(2) {
+                            background-color: $Orangey-yellow-sat;
+                            transition-delay: .1s;
+                            .test-title {
+                                color: $Orangey-yellow;
+                            }
+                        }
+                        &:nth-child(3) {
+                            background-color: $Green-teal-sat;
+                            transition-delay: .2s;
+                            .test-title {
+                                color: $Green-teal
+                            }
+                        }
+                        &:last-child {
+                            background-color: $Light-slate-blue-sat;
+                            transition-delay: .3s;
+                            margin-bottom: unset;
+                            .test-title {
+                                color: $Light-slate-blue
+                            }
+                        }
+                    }
+                }
+            }
+            .continue {
+                background-color: $Cobalt-blue;
+                border: none;
+                outline: none;
+                font-family: hMed;
+                color: $White;
+                &:hover {
+                    background-color: $Light-slate-blue;
+                }
+            }
+        }
+    }
+}

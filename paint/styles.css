@@ -1,0 +1,86 @@
+@font-face {
+  font-family: hBolder;
+  src: url(./../assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+@font-face {
+  font-family: hBold;
+  src: url(./../assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: hMed;
+  src: url(./../assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+@font-face {
+  font-family: hReg;
+  src: url(./../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+body .wrapper {
+  height: 100vh;
+}
+body .wrapper .container .left-column {
+  background-color: hsl(234, 85%, 45%);
+}
+body .wrapper .container .left-column .title {
+  font-family: hReg;
+  color: hsl(0, 0%, 100%);
+}
+body .wrapper .container .left-column .score {
+  width: 50%;
+  aspect-ratio: 1/1;
+  background: linear-gradient(hsl(224, 30%, 27%), hsla(241, 72%, 46%, 0));
+}
+body .wrapper .container .left-column .great {
+  font-family: hBolder;
+}
+body .wrapper .container .left-column .remark {
+  font-size: 18px;
+}
+body .wrapper .container .right-column .summary {
+  color: hsl(224, 30%, 27%);
+}
+body .wrapper .container .right-column .tests-detail .test {
+  margin-bottom: 20px;
+  transform: translate(1000px);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+body .wrapper .container .right-column .tests-detail .test.active {
+  transform: translate(0px);
+}
+body .wrapper .container .right-column .tests-detail .test:first-child {
+  background-color: hsla(0, 100%, 67%, 0.178);
+}
+body .wrapper .container .right-column .tests-detail .test:first-child .test-title {
+  color: hsl(0, 100%, 67%);
+}
+body .wrapper .container .right-column .tests-detail .test:nth-child(2) {
+  background-color: hsla(39, 100%, 56%, 0.158);
+  transition-delay: 0.1s;
+}
+body .wrapper .container .right-column .tests-detail .test:nth-child(2) .test-title {
+  color: hsl(39, 100%, 56%);
+}
+body .wrapper .container .right-column .tests-detail .test:nth-child(3) {
+  background-color: hsla(166, 100%, 37%, 0.151);
+  transition-delay: 0.2s;
+}
+body .wrapper .container .right-column .tests-detail .test:nth-child(3) .test-title {
+  color: hsl(166, 100%, 37%);
+}
+body .wrapper .container .right-column .tests-detail .test:last-child {
+  background-color: hsla(252, 100%, 67%, 0.158);
+  transition-delay: 0.3s;
+  margin-bottom: unset;
+}
+body .wrapper .container .right-column .tests-detail .test:last-child .test-title {
+  color: hsl(252, 100%, 67%);
+}
+body .wrapper .container .continue {
+  background-color: hsl(234, 85%, 45%);
+  border: none;
+  outline: none;
+  font-family: hMed;
+  color: hsl(0, 0%, 100%);
+}
+body .wrapper .container .continue:hover {
+  background-color: hsl(252, 100%, 67%);
+}
