@@ -19,7 +19,8 @@
 body {
     .wrapper {
         height: 100vh;
-        .container {
+        .child-wrapper {
+            background-color: $Pale-blue;
             .left-column {
                 background-color: $Cobalt-blue;
                 // border: solid 1px yellow;
@@ -91,6 +92,15 @@ body {
                 &:hover {
                     background-color: $Light-slate-blue;
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        .wrapper {
+            .child-wrapper {
+                height: 100vh;
             }
         }
     }

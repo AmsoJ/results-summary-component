@@ -17,70 +17,79 @@
 body .wrapper {
   height: 100vh;
 }
-body .wrapper .container .left-column {
+body .wrapper .child-wrapper {
+  background-color: hsl(221, 100%, 96%);
+}
+body .wrapper .child-wrapper .left-column {
   background-color: hsl(234, 85%, 45%);
 }
-body .wrapper .container .left-column .title {
+body .wrapper .child-wrapper .left-column .title {
   font-family: hReg;
   color: hsl(0, 0%, 100%);
 }
-body .wrapper .container .left-column .score {
+body .wrapper .child-wrapper .left-column .score {
   width: 50%;
   aspect-ratio: 1/1;
   background: linear-gradient(hsl(224, 30%, 27%), hsla(241, 72%, 46%, 0));
 }
-body .wrapper .container .left-column .great {
+body .wrapper .child-wrapper .left-column .great {
   font-family: hBolder;
 }
-body .wrapper .container .left-column .remark {
+body .wrapper .child-wrapper .left-column .remark {
   font-size: 18px;
 }
-body .wrapper .container .right-column .summary {
+body .wrapper .child-wrapper .right-column .summary {
   color: hsl(224, 30%, 27%);
 }
-body .wrapper .container .right-column .tests-detail .test {
+body .wrapper .child-wrapper .right-column .tests-detail .test {
   margin-bottom: 20px;
   transform: translate(1000px);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-body .wrapper .container .right-column .tests-detail .test.active {
+body .wrapper .child-wrapper .right-column .tests-detail .test.active {
   transform: translate(0px);
 }
-body .wrapper .container .right-column .tests-detail .test:first-child {
+body .wrapper .child-wrapper .right-column .tests-detail .test:first-child {
   background-color: hsla(0, 100%, 67%, 0.178);
 }
-body .wrapper .container .right-column .tests-detail .test:first-child .test-title {
+body .wrapper .child-wrapper .right-column .tests-detail .test:first-child .test-title {
   color: hsl(0, 100%, 67%);
 }
-body .wrapper .container .right-column .tests-detail .test:nth-child(2) {
+body .wrapper .child-wrapper .right-column .tests-detail .test:nth-child(2) {
   background-color: hsla(39, 100%, 56%, 0.158);
   transition-delay: 0.1s;
 }
-body .wrapper .container .right-column .tests-detail .test:nth-child(2) .test-title {
+body .wrapper .child-wrapper .right-column .tests-detail .test:nth-child(2) .test-title {
   color: hsl(39, 100%, 56%);
 }
-body .wrapper .container .right-column .tests-detail .test:nth-child(3) {
+body .wrapper .child-wrapper .right-column .tests-detail .test:nth-child(3) {
   background-color: hsla(166, 100%, 37%, 0.151);
   transition-delay: 0.2s;
 }
-body .wrapper .container .right-column .tests-detail .test:nth-child(3) .test-title {
+body .wrapper .child-wrapper .right-column .tests-detail .test:nth-child(3) .test-title {
   color: hsl(166, 100%, 37%);
 }
-body .wrapper .container .right-column .tests-detail .test:last-child {
+body .wrapper .child-wrapper .right-column .tests-detail .test:last-child {
   background-color: hsla(252, 100%, 67%, 0.158);
   transition-delay: 0.3s;
   margin-bottom: unset;
 }
-body .wrapper .container .right-column .tests-detail .test:last-child .test-title {
+body .wrapper .child-wrapper .right-column .tests-detail .test:last-child .test-title {
   color: hsl(252, 100%, 67%);
 }
-body .wrapper .container .continue {
+body .wrapper .child-wrapper .continue {
   background-color: hsl(234, 85%, 45%);
   border: none;
   outline: none;
   font-family: hMed;
   color: hsl(0, 0%, 100%);
 }
-body .wrapper .container .continue:hover {
+body .wrapper .child-wrapper .continue:hover {
   background-color: hsl(252, 100%, 67%);
+}
+
+@media screen and (max-width: 600px) {
+  body .wrapper .child-wrapper {
+    height: 100vh;
+  }
 }

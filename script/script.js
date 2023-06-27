@@ -7,6 +7,8 @@ import testTaken from './testTaken.js';
 const testTakenBoard = document.querySelector(".tests-detail");
 const continueButton = document.querySelector(".continue");
 const scoreText = document.querySelector(".score-text");
+const remark = document.querySelector(".remark");
+const great = document.querySelector(".great");
 
 
 // merging data and classes to be one
@@ -45,6 +47,7 @@ continueButton.addEventListener("click", () => {
         let timeInterval = setInterval(()=>{
             scoreText.textContent = ++controlVariable;
             controlVariable >= average && clearInterval(timeInterval);
+            remarkable(average);
         }, 30)
     }, 3000);
 })
@@ -53,4 +56,18 @@ continueButton.addEventListener("click", () => {
 function callingTestBlocks(action) {
     const test = [...document.querySelectorAll(".test")];
     action === "show" ? test.forEach(testBlock => testBlock.classList.add("active")) : test.forEach(testBlock => testBlock.classList.remove("active"));
+}
+
+function remarkable(score) {
+    let remarkText = "", greaterText = "";
+    if(score < 50) {
+        remarkText = "Try harder next time, you aint doing that bad";
+        greaterText = "Poor";
+    }else {
+        let randomPercentage = Math.floor(Math.random() * 100);
+        greaterText = "Great";
+        remarkText = "You scored higher than " + randomPercentage +"% of the people who take these tests";
+    }
+    remark.textContent = remarkText;
+    great.textContent = greaterText;
 }
